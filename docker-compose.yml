@@ -1,0 +1,133 @@
+# =============================================================================
+# COMPOSE UNIFIÉ — CAMPUS NUMÉRIQUE IFSIO (PARAKOU)
+# Orchestration des 4 plateformes et de l'infrastructure de données
+# =============================================================================
+
+version: '3.8'
+
+services:
+  # ---------------------------------------------------------------------------
+  # 1. Base de données relationnelle PostgreSQL unifiée
+  # ---------------------------------------------------------------------------
+  ifsio-db:
+    image: postgres:16-alpine
+    container_name: ifsio-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ifsio
+      POSTGRES_PASSWORD: ifsio_parakou_db_secret
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ifsio_pgdata:/var/lib/postgresql/data
+      - ./docker/init-db:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ifsio -d postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ---------------------------------------------------------------------------
+  # 2. Vitrine & Hub Étudiant IFSIO (Port 8081)
+  # ---------------------------------------------------------------------------
+  ifsio-site:
+    build:
+      context: ./ifsio-site
+      dockerfile: Dockerfile
+    container_name: ifsio-site
+    restart: unless-stopped
+    depends_on:
+      ifsio-db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 8081
+      HOST: 0.0.0.0
+      DATABASE_URL: postgresql://ifsio:ifsio_parakou_db_secret@ifsio-db:5432/ifsio_portal
+      SESSION_SECRET: 79d240ba41f3869486fd133df7872337602c00daf9a1cef908b315e5bba2ee234cd7f1ccfb54d18ad08de1b700e06ffa
+      RESULTATS_URL: http://localhost:5174
+      ACTES_URL: http://localhost:5173
+      CNTRSS_URL: http://localhost:3100
+    ports:
+      - "8081:8081"
+    volumes:
+      - ifsio_site_uploads:/app/portal-service/uploads
+
+  # ---------------------------------------------------------------------------
+  # 3. Mes Résultats IFSIO (Port 3000 / 5174)
+  # ---------------------------------------------------------------------------
+  resultats-ifsio:
+    build:
+      context: ./resultats-ifsio-app
+      dockerfile: Dockerfile
+    container_name: resultats-ifsio
+    restart: unless-stopped
+    depends_on:
+      ifsio-db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_URL: postgresql://ifsio:ifsio_parakou_db_secret@ifsio-db:5432/resultats_ifsio
+      JWT_SECRET: 39fe9e9e529f605ac31992514ce169ca7d34fa18e9c8de759d23a6427cb7c61849fb81f3cc7296d21b734e5cfd9682e4
+      CAMPUS_INTERNAL_SECRET: ifsio-campus-secret-key-parakou-2026
+      CORS_ORIGIN: "*"
+    ports:
+      - "3000:3000"
+      - "5174:3000"
+
+  # ---------------------------------------------------------------------------
+  # 4. Mes Actes IFSIO — Générateur Certifié & Vérification (Port 4000 / 5173)
+  # ---------------------------------------------------------------------------
+  mes-actes:
+    build:
+      context: ./mes-actes
+      dockerfile: Dockerfile
+    container_name: mes-actes
+    restart: unless-stopped
+    depends_on:
+      - resultats-ifsio
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      SERVE_STATIC: "true"
+      STATIC_DIR: /app/dist
+      JWT_SECRET: mes-actes-production-secret-key-parakou-ifsio-2026-auth
+      RESULTATS_API_URL: http://resultats-ifsio:3000
+      CAMPUS_INTERNAL_SECRET: ifsio-campus-secret-key-parakou-2026
+      ADMIN_EMAIL: scolarite@ifsio.bj
+      ADMIN_PASSWORD: Scolarite2026!
+      ADMIN_FIRST_NAME: Direction
+      ADMIN_LAST_NAME: SCOLARITÉ
+    ports:
+      - "4000:4000"
+      - "5173:4000"
+    volumes:
+      - mes_actes_data:/app/data
+
+  # ---------------------------------------------------------------------------
+  # 5. CNTRSS Catalogue (Port 3100)
+  # ---------------------------------------------------------------------------
+  cntrss-catalogue:
+    build:
+      context: ./cntrss-catalogue
+      dockerfile: Dockerfile
+    container_name: cntrss-catalogue
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3100
+      DATABASE_URL: file:./data/dev.db
+      UPLOADS_DIR: data/uploads
+      ENABLE_DEMO_LOGIN: "true"
+    ports:
+      - "3100:3100"
+    volumes:
+      - cntrss_data:/app/data
+
+volumes:
+  ifsio_pgdata:
+  ifsio_site_uploads:
+  mes_actes_data:
+  cntrss_data:

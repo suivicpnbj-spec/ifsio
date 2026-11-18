@@ -1,0 +1,1058 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>IFSIO | Institut de formation en soins infirmiers et obstétricaux</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="assets/ressources/jpg/logo-1.jpg">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700%7CRoboto:100,300,400,500,700,900,300italic">
+    <link rel="stylesheet" href="assets/frontOffice/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/frontOffice/css/fonts.css">
+    <link rel="stylesheet" href="assets/frontOffice/css/style2.css">
+    <link rel="stylesheet" href="assets/frontOffice/css/style.css">
+
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+
+    <link rel="stylesheet" href="assets/frontOffice/css/custom.css%3Fv=39.css">
+
+
+    <style type="">
+
+      @font-face {
+        font-family: Montserrat-Black;
+        src: url(assets/css/Montserrat-Black.ttf);
+      }
+      @font-face {
+        font-family: Montserrat-ExtraBold;
+        src: url(assets/css/Montserrat-ExtraBold.ttf);
+      }
+      @font-face {
+        font-family: Montserrat-Bold;
+        src: url(assets/css/Montserrat-Bold.ttf);
+      }
+      @font-face {
+        font-family: Montserrat;
+        src: url(assets/css/Montserrat-Regular.ttf);
+      }
+
+      .montserrat-300 {
+        font-family: "Montserrat", serif;
+        font-optical-sizing: auto; 
+        font-style: normal;
+      } 
+
+      .montserrat-600 {
+        font-family: "Montserrat-Black", serif;
+        font-optical-sizing: auto; 
+        font-style: normal;
+      } 
+
+      .montserrat-700 {
+        font-family: "Montserrat-Bold", serif;
+        font-optical-sizing: auto; 
+        font-style: normal;
+      } 
+      .montserrat-900 {
+        font-family: "Montserrat-ExtraBold", serif;
+        font-optical-sizing: auto; 
+        font-style: normal;
+      } 
+
+      /*.montserrat-600 {
+        font-family: "Montserrat", serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+      }
+
+      .montserrat-900 {
+        font-family: "Montserrat", serif;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        font-style: normal;
+      }*/
+
+      .rd-navbar-light.rd-navbar-static .rd-navbar-main-element{
+        max-width: 100%;
+      }
+
+      .hide{
+        display: none !important;
+      }
+
+      .rd-navbar-light.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main .home_img{
+        display: block !important;
+      }
+
+      .rd-navbar-light.rd-navbar-static .rd-navbar-main .home_img{
+        display: none !important;
+      }
+
+      .rd-navbar-light.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main .home_icone{
+        display: none !important;
+      }
+
+      .rd-navbar-light.rd-navbar-static .rd-navbar-main .home_icone{
+        display: block !important;
+      }
+
+      .formations_menu_item:before{ 
+        content: "";
+        background: rgba(0, 0, 0, .65);
+        height: 150px; 
+        width: 314px;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .rd-navbar-light.rd-navbar-static .rd-navbar-main { 
+          padding: 20px 0 ;
+      }
+      
+    </style>
+
+    <style>
+      .hidden-lg{
+          display: none;
+        }  
+      .hidden-xs{
+        display: block;
+      }  
+      @media  (min-width: 1200px) and (max-width: 1400px) {
+        .banniere_text{
+          font-size: 16px !important; 
+        }
+        .banniere_img{
+          width: 90px !important;
+          height: 90px !important;
+        }
+
+        .banniere_text_cnt{
+          width: 74% !important;
+        }
+        .banniere_img_cnt{
+        }
+      }
+
+      @media  (min-width: 768px) and (max-width: 1199px) {
+        .banniere_text{
+          font-size: 13px !important; 
+        }
+        .banniere_img{
+          width: 80px !important;
+          height: 80px !important;
+        }
+
+        .banniere_text_cnt{
+          width: 74% !important;
+        }
+        .banniere_img_cnt{
+        }
+      }
+
+      @media   (max-width: 767px) {
+        .banniere_text{
+          font-size: 10px !important; 
+          margin-top: -6px;
+          margin-bottom: 0 !important;
+        }
+        .banniere_img{
+          width: 60px !important;
+          height: 60px !important;
+        }
+
+        .banniere_text_cnt{
+          width: 74% !important;
+          margin-top: 15px  !important;
+
+        }
+        .banniere_img_cnt{
+          width: 11% !important;
+        }
+        .banniere_cnt{
+          padding: 10px !important;
+        }
+
+        .contenu{
+          height: auto !important;
+        }
+        .contenu > .col-md-6{
+          border-right: none !important;
+          /*  border-bottom: 1px solid #ddd;*/
+          padding-bottom: 20px;
+        }     
+        .contenu{
+          text-align: center;
+        } 
+        .hidden-lg{
+          display: block;
+        }  
+        .hidden-xs{
+          display: none;
+        }
+
+        .banniere_img_cnt .ifsio_img{
+          left: -20px !important;
+        }
+
+        .banniere_img_cnt .univparakou_img{
+          max-width: max-content;
+        }
+
+        .slide-inner span{
+          font-size: 24px;
+        }
+
+        .slide-inner a{
+          padding: 6px 12px !important;
+        }
+
+        section p {
+          font-size: 12px;
+        }
+
+        section h3 {
+          font-size: 18px;
+        }
+
+        section h1.montserrat-600{
+          font-size: 20px !important;
+          padding-top: 10px;
+          line-height: 25px;
+        }
+
+        section h2{
+          font-size: 14px !important;
+        }
+
+        .filter-button-formations{
+          padding: 2px 10px;
+          font-size: 12px;
+        }
+
+        #eservices_section .col-sm-6{
+          width: 50% !important;
+        }
+
+        #eservices_section .col-sm-6 a{
+          padding: 14px 10px !important;
+          height: 110px !important;
+        }
+
+        .eservices_section img{
+          height: 30px !important;
+          padding-right: 0px !important; 
+          margin-bottom: 5px;
+          display: block;
+          margin: 0 auto;
+        }
+        .eservices_section{
+          padding-top: 10px !important;
+        }
+
+        .eservices_section p{
+          font-size: 14px !important;
+          display: block;
+          width: 100%;
+        }
+
+        .uk-card-body a{
+          font-size: 18px !important;
+        }
+
+        .uk-panel a {
+          font-size: 16px !important;
+        }
+
+
+ 
+
+        body{
+          background-position: 9% 1px;
+          background-repeat: no-repeat;
+        }  
+      }
+    </style>
+  </head>
+
+    <!-- Pagination css -->
+    <link href="assets/frontOffice/css/pagination.css" rel="stylesheet">
+
+    <!-- Google Tag Manager -->
+      <!-- <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-56HZLJB');
+      </script> -->
+    <!-- End Google Tag Manager -->
+
+    <style>
+      .text-ul{
+        list-style: square;
+        padding-left: 60px;
+      }
+
+      .text-ul2{
+        list-style: circle;
+        padding-left: 60px;
+      }
+
+      .text-li{
+        display: list-item;
+      }
+
+      .text-car-right{
+        text-align: right;
+      }
+      
+      .pagination {
+        margin-top: 30px;
+      } 
+
+      .pagination li a{
+        color: #fff;
+      }
+
+      
+
+      .pagination li{
+        background-color: #009800;
+        padding: 10px 15px;
+        border: 1px solid #fff;
+      }
+
+      .pagination li.active{
+        background-color: #97d297;
+      }
+
+      .pagination li:first-child{
+        border-radius: 5px 0 0 5px;
+      }
+
+      .pagination li:last-child {
+        border-radius: 0 5px 5px 0;
+      }
+
+      /* blink {
+        -webkit-animation: 2s linear infinite condemed_blink_effect; // pour Safari 4.0-8.0
+        animation: 2s linear infinite condemed_blink_effect;
+      }
+      
+      @-webkit-keyframes condemed_blink_effect { // pour Safari 4.0-8.0
+        0% {
+          visibility: hidden;
+        }
+        50% {
+          visibility: hidden;
+        }
+        100% {
+          visibility: visible;
+        }
+      }
+      
+      @keyframes condemed_blink_effect {
+        0% {
+          visibility: hidden;
+        }
+        50% {
+          visibility: hidden;
+        }
+        100% {
+          visibility: visible;
+        }
+      } */
+
+      .research_col{
+        color: #666;
+      }
+
+      .research_col:hover{
+        color: #009800;;
+      }
+
+    </style>
+   
+  </head>
+  <body class="montserrat-700">
+
+    <!-- <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        </div>
+        <p> Chargement ...</p>
+    </div> -->
+    <div class="page"> 
+      
+      <!-- Banniere -->
+      
+      <div class="row" style="margin: 0;">
+        <div class="col-md-12 banniere_cnt" style="padding: 10px 20px 0px; background: #fff;border-bottom: 1px solid #ddd;">
+          <div class="row">
+            
+
+            <div class="col-md-12 " style="padding:0">
+              <div class="container" style="padding:0">
+                <div class="banniere_img_cnt" style="width:12%;display: inline-block;">
+                  <div class="banniere_img" style="height: 80px; width: 100%;border-radius: 100%;background: #fff; float: left; padding-left: 10px;  margin-top: 5px;">
+                    <img class="univparakou_img" src="assets/logo_univ_parakou.jpg" style="height: 100%; margin: 0px;border-radius: 100%;left: 2px;position: relative;margin-top: -5px;">
+                  </div>
+                </div>
+                <div class="banniere_text_cnt"  style="width:75%;display: inline-block;vertical-align: top; margin-top: 10px;">
+                  <p class="banniere_text" style="text-transform:uppercase;text-align: center;color: #F30704;font-size: 18px;margin-bottom: 0px;">Université de Parakou</p>
+                  <!-- hidden-xs -->
+                  <p class="banniere_text hidden-xs" style="text-transform:uppercase;text-align: center;color: #1D8ec7;font-style: italic;font-size: 18px; margin-top: 5px;">Institut de formation en soins infirmiers et obstétricaux (IFSIO)</p>
+                  <!-- hidden-lg -->
+                  <p class="banniere_text hidden-lg" style="text-transform:uppercase;text-align: center;color: #1D8ec7;font-style: italic;font-size: 18px;margin: 0;">Institut de formation en soins</p>
+                  <p class="banniere_text hidden-lg" style="text-transform:uppercase;text-align: center;color: #1D8ec7;font-style: italic;font-size: 18px;margin: 0;">Infirmiers et obstétricaux (IFSIO)</p>
+                  <p style="text-align: center;color: #1D8ec7;font-size: 18px;margin: 0; padding-bottom: 15px;"><i class="fa fa-envelope" style="font-style: normal;"></i> contact.ifsio-up@gouv.bj</p>
+                </div>
+                
+
+                <div class="banniere_img_cnt"  style="width:12%;display: inline-block; text-align: right;margin-top: 10px;">
+                    <a href="index.html">
+                      <div class="banniere_img" style="height: 80px; width: 100px;border-radius: 100%;background: #fff; float: right;  margin-right: 10px;  margin-top: 5px;">
+                          <img class="ifsio_img" src="assets/ressources/jpg/logo-1.jpg" style="height: 98%; margin: 0px;border-radius: 100%;left: 2px;position: relative;margin-top: -5px;">
+                      </div>
+                    </a>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+          
+           
+        </div>
+      </div>
+
+      
+      
+      <!-- Banniere -->
+      <header class="section page-header">
+        <!--RD Navbar-->
+        <div class="rd-navbar-wrap" >
+          <nav class="rd-navbar rd-navbar-light" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <!-- <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div> -->
+            
+            
+            
+            <!-- Modals --> 
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main" style="box-shadow: 0 5px 10px -6px rgb(0 0 0 / 0%);">
+                <!--RD Navbar Panel-->
+                <div class="rd-navbar-panel hidden-lg">
+                  <!--RD Navbar Toggle-->
+                  <button style="width: 100%;" class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span style="    display: inline-block;"></span> <p style="display:inline-block; color:#000; margin: 0;position: relative; top: 3px;">MENU</p></button>
+                  <!--RD Navbar Brand-->
+                  <div class="rd-navbar-brand">
+                     
+                  </div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <ul class="rd-navbar-nav" style="font-size: 16px; ">
+
+                        <li class="rd-nav-item" style='font-size: 14px'>
+                            <!-- <a href="#" class="rd-nav-link home_icone"><i class="fa fa-home"></i></a> -->
+                            <a href="index.html" class="rd-nav-link home_img" style="margin-right: 30px;">
+                                <img src="assets/ressources/jpg/logo-1.jpg" style="height: 60px; margin: 0px;border-radius: 100%;">
+                            </a>
+                        </li>    
+                         
+
+
+                                                    
+                                   
+
+
+                                <li class="rd-nav-item" style='font-size: 14px;margin: 0;'>
+                                        <a    class="rd-nav-link">L'Institut</a>
+                                    
+                                    
+                                    
+                                                                                                
+                                            
+                                            <ul class="rd-menu rd-navbar-dropdown">
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="1.-Presentation-1.html">Présentation</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="2.-Mot-des-dirigeants-1.html">Mot des dirigeants</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="3.-Notre-equipe.html">Notre équipe</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="EQUIPE-HONORAIRE.html">Equipe Honoraire</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="4.-Centre-de-recherche.html">Recherches</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="5.-Partenaires.html">Partenaires</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="7.-Contact.html">Nous contacter</a></li>
+                                                    
+                                                                                            </ul>
+                                            
+                                            
+                                                                        </li>
+                            
+                                   
+
+
+                                <li class="rd-nav-item" style='font-size: 14px;'>
+                                        <a href="3.-Formations.html"   class="rd-nav-link">Etudes et diplômes</a>
+                                    
+                                    
+                                    
+                                                                                            <!-- <ul class="rd-menu rd-navbar-dropdown" style="width:700px; padding: 20px;">
+                                                    <div class="row"> 
+
+                                                        
+                                                    
+                                                    
+                                                                <div class="col-md-6">
+
+
+                                                                    <a style="display:block;width: 100%;height: 150px;background: url(https://ifsio.bj/assets/ressources/rub22.jpg);background-size: cover;" href="#">
+                                                                            <div class="formations_menu_item" style="height: 100%;">
+                                                                                <div style="position: relative;height: 100%;">
+                                                                                    <div style="position: absolute;width: 100%; height: 100%;">
+                                                                                    <p style="position: relative;text-align: center;top: 40%;color: #fff; z-index: 1; font-size: 20px; "><p>Les Licences sont regroupées dans cinq (05) groupes pédagogiques capitalisant à la fin des trois (03) années de formation 180 crédits notamment :</p><ul><li>Licence 1 (60 crédits) : Tronc commun ;</li><li>Licence 2 spécialité (60 crédits) : Soins Obstétricaux et Soins Infirmiers et ;</li><li>Licence 3 spécialité&nbsp;(60 crédits) : Soins Obstétricaux et Soins Infirmiers.</li></ul><p>Les enseignements sont en présentiel et les stages sont obligatoires dans cette formation.</p><p>L'accès à la formation en Sciences Infirmières et Obstétricales est subordonné à l'obtention du baccalauréat série D ou C et à la réussite aux concours organisés par la Direction des Examens et Concours (DEC) du Ministère de l'Enseignement Supérieur et de la Recherche Scientifique (MESRS). Une moyenne d'au moins 12/20 est exigée pour participer auxdits concours. De même, d'autres voix d'accès à cette formation sont possibles.</p><p>A décembre 2025, l'Institut est à sa huitième (8ème) promotion des lauréats en Soins infirmiers et obstétricaux. Son vivier est de 1.187 diplômés dont 567 Sage-femmes et 620 Infirmiers-ères.</p></p>
+                                                                                    </div> 
+                                                                                </div>
+                                                                            </div>
+                                                                        
+                                                                    </a>
+                                                                    <h3  style="font-size:14px;line-height: 24px;text-align: center;">Licence professionnelle en SIO</h3>
+                                                                </div> 
+                                                                
+                                                    
+                                                                <div class="col-md-6">
+
+
+                                                                    <a style="display:block;width: 100%;height: 150px;background: url(https://ifsio.bj/assets/ressources/rub23.png);background-size: cover;" href="#">
+                                                                            <div class="formations_menu_item" style="height: 100%;">
+                                                                                <div style="position: relative;height: 100%;">
+                                                                                    <div style="position: absolute;width: 100%; height: 100%;">
+                                                                                    <p style="position: relative;text-align: center;top: 40%;color: #fff; z-index: 1; font-size: 20px; "><p>Les Masters sont des parcours de spécialisation en Sciences Infirmières et Obstétricales (SIO). A l'heure actuelle, trois (03) offres sont proposées. Il s'agit :</p><ol><li>Master en Santé Sexuelle et Reproductive (SSR);</li><li>Master en Instrumentation et Aide Chirurgicales (IAC) et ;</li><li>Master en Soins infirmiers de Médecine d'Urgence (SMUr).</li></ol><p>Le master est proposé aux diplômés en licence professionnelle en Sciences Infirmières et Obstétricales (SIO) ayant deux (02) années de pratiques professionnelles. Ce parcours permet aux spécialistes l'acquisition de 120 crédits capitalisables et transférables.</p><p>Au total, 124 spécialistes sont sorties de ce prestigieux centre de formation dont&nbsp;48 diplômés pour la SSR, 47 diplômés pour l'IAC et 29 diplômés pour les SMUr.</p><p>L'accès à la formation du master est préalable à la réussite du test probatoire organisé tous les ans entre septembre et octobre. Le programme du test probatoire est disponible à la coordination de l'Institut par spécialité.</p></p>
+                                                                                    </div> 
+                                                                                </div>
+                                                                            </div>
+                                                                        
+                                                                    </a>
+                                                                    <h3  style="font-size:14px;line-height: 24px;text-align: center;">Master professionnel</h3>
+                                                                </div> 
+                                                                
+                                                                                                        </div>
+                                                </ul> -->
+                                                
+                                            <ul class="rd-menu rd-navbar-dropdown">
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="1.-Licence.html">Licence professionnelle en SIO</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="2.-Master.html">Master professionnel</a></li>
+                                                    
+                                                                                            </ul>
+                                            
+                                            
+                                                                        </li>
+                            
+                                   
+
+
+                                <li class="rd-nav-item" style='font-size: 14px;'>
+                                        <a    class="rd-nav-link">Espace étudiant</a>
+                                    
+                                    
+                                    
+                                                                                                
+                                            
+                                            <ul class="rd-menu rd-navbar-dropdown">
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="1.-Candidatures-et-Inscriptions.html">Candidatures et Inscriptions</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="1.-Cultures.html">Vie associative (BUE et Association culturelle)</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="services/ressources.html">Services en ligne</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="2.-Insertion-professionnelle-et-Alumni.html">Insertion professionnelle et Alumni</a></li>
+                                                    
+                                                                                            </ul>
+                                            
+                                            
+                                                                        </li>
+                            
+                                   
+
+
+                                <li class="rd-nav-item" style='font-size: 14px;'>
+                                        <a    class="rd-nav-link">Ressources</a>
+                                    
+                                    
+                                    
+                                                                                                
+                                            
+                                            <ul class="rd-menu rd-navbar-dropdown">
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="1.-Documents.html">Documentation</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="https://www.flickr.com/photos/ifsiobj/albums">Galerie Photos</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="https://www.youtube.com/@Ifsio-i7m">Vidéos</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="4.-Liens-utiles.html">Liens utiles</a></li>
+                                                    
+                                                                                            </ul>
+                                            
+                                            
+                                                                        </li>
+                            
+                                   
+
+
+                                <li class="rd-nav-item" style='font-size: 14px;'>
+                                        <a    class="rd-nav-link">Publications</a>
+                                    
+                                    
+                                    
+                                                                                                
+                                            
+                                            <ul class="rd-menu rd-navbar-dropdown">
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="1.-Actualites.html">Actualités</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="2.-Communiques.html">Communiqués</a></li>
+                                                    
+                                                
+                                                    <li class="rd-dropdown-item"><a style=" font-size: 13px;" class="rd-dropdown-link" href="3.-Activites.html">Activités</a></li>
+                                                    
+                                                                                            </ul>
+                                            
+                                            
+                                                                        </li>
+                                                                      </div>
+                  <!--RD Navbar Search-->
+                  <div class="rd-navbar-search" style="width: 200px;">
+                    <form class="rd-search" method="post" action="https://ifsio.bj/MS_console/rechercher" id="search">
+                      <div class="form-wrap">
+                        <input style="" class="form-input montserrat-300"  type="text" name="q" placeholder="Tapez le mot à rechercher ici..." autocomplete="off">
+                        <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                      </div>
+                      <button class="rd-search-form-submit fl-bigmug-line-search74" type="submit"></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </nav>
+        </div>
+      </header><style>
+  section.section-md ul{
+    margin-left: 1.4em !important;
+  }
+
+  section.section-md ul li{
+    list-style: disc !important;
+    margin-left: 1.4em !important;
+    display: list-item !important;
+  }
+</style>     
+    <section class="section article-top-section bg-alabaster">
+
+        <div class="container">
+          <h3 class="wow slideInLeft"> Carrousel</h3>
+          <div class="bg-image article-ban wow slideInRight" style="background-image: url();" data-preset='{"title":"Breadcrumbs","category":"header","reload":false,"id":"breadcrumbs"}'></div>
+        </div>
+
+
+        <div class="breadcrumbs-inner">
+          <div class="container mt-0">
+            <ul class="breadcrumbs-custom-path">
+                                                                                              <li><a href="index.html">Accueil</a></li>
+                                                                      <li><a href="Carrousel.html#">Carrousel</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Blog post-->
+
+
+
+      <section class="section-md section">
+        <div class="container">
+          <div class="row row-30">
+
+          <div class="col-lg-12">
+                          <div id='rubrique_container' class="row row-50 row-xxl-70">
+              
+              
+              
+                <div class="col-sm-6 wow slideInDown">
+                  <p>Aucun article disponible</p>
+                </div>
+
+               
+                <div id='pagination'></div>
+              </div>
+              
+
+                          </div>
+            <aside class="col-sm-12 col-lg-4 col-xl-3 offset-top-60 offset-md-top-0 wow slideInLeft" style="border-left: 1px solid #ebebeb ; ">
+              <div class="inset-lg-left-15 inset-lg-right-10">
+                <div class="row row-30">
+                  <div class="col-sm-12 col-md-6 col-lg-12 offset-top-34">
+                     <!-- Dans la même rubrique -->
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>      
+      <!-- Newsletter --> 
+
+      <!-- Footer -->
+      <footer class="footer-classic">
+        <div class="section-md section-md-75 bg-river-bed">
+          <div class="container text-center text-md-start">
+            <div class="row justify-content-sm-center row-30">
+              <div class="col-sm-12 col-md-6 col-xl-3 contact_info">
+                <h4 style="text-transform:uppercase;">Contact info</h4>
+                <hr style="margin-bottom: 20px;"> 
+
+                
+                                 <p>(229) 01 23 61 20 46</p><p>&nbsp;contact.ifsio-up@gouv.bj</p><p>&nbsp;123 Parakou</p>                <div>
+                  <h4 style="padding-top:40px;text-transform:uppercase;">Suivez-nous</h4>
+                  <hr style="margin-top: 18px; margin-bottom: 18px"> 
+
+                  <ul class="list-inline" style="margin-top: 20px;">
+                    <li><a class="icon icon-xxs icon-circle icon-dark icon-alto-filled fa-facebook" href="Carrousel.html#"></a></li>
+                    <!-- <li><a class="icon icon-xxs icon-circle icon-dark icon-alto-filled fa-whatsapp" href="#"></a></li> -->
+                    <li><a class="icon icon-xxs icon-circle icon-dark icon-alto-filled fa-twitter" href="Carrousel.html#"></a></li>
+                    <li><a class="icon icon-xxs icon-circle icon-dark icon-alto-filled fa-linkedin" href="Carrousel.html#"></a></li>
+                    <li><a class="icon icon-xxs icon-circle icon-dark icon-alto-filled fa-youtube" href="Carrousel.html#"></a></li>
+                  </ul>
+                </div>
+
+                
+                
+              </div>
+
+              <div class="col-sm-12 col-md-6 col-xl-6 contact_info">
+                <h4 style="text-transform:uppercase;">Plan du site</h4>
+                <hr> 
+ 
+                  
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <!-- Début Institut -->
+                      
+                                                                    <b style="font-weight:900;"><a href="2.-L-Institut.html">L'Institut</a></b>
+                                                  <ul style="padding-left: 15px;">
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="1.-Presentation-1.html">Présentation</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="2.-Mot-des-dirigeants-1.html">Mot des dirigeants</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="3.-Notre-equipe.html">Notre équipe</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="EQUIPE-HONORAIRE.html">Equipe Honoraire</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="4.-Centre-de-recherche.html">Recherches</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="5.-Partenaires.html">Partenaires</a></li>
+                                                      </ul>
+                          
+                                                                    <!-- Fin Institut -->
+
+                      <!-- Début Vie estudiantine -->
+                      
+                                                                    <p style="margin-top: 10px"> <b style="font-weight:900;"><a href="3.-Vie-Estudiantine.html">Espace étudiant</a></b></p>
+                                                  <ul style="padding-left: 15px;">
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="1.-Candidatures-et-Inscriptions.html">Candidatures et Inscriptions</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="1.-Cultures.html">Vie associative (BUE et Association culturelle)</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="services/ressources.html">Services en ligne</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="2.-Insertion-professionnelle-et-Alumni.html">Insertion professionnelle et Alumni</a></li>
+                                                      </ul>
+                          
+                                                                    <!-- Fin Vie estudiantine -->
+
+
+                      
+
+                      
+                    </div>
+
+                    <div class="col-md-6">
+
+                      <!-- Début Formations -->
+                      
+                                                                    <p style="margin-top: 0px;"> <b style="font-weight:900;"><a href="3.-Formations.html">Etudes et diplômes</a></b></p>
+                                                  <ul style="padding-left: 15px;">
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="1.-Licence.html">Licence professionnelle en SIO</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="2.-Master.html">Master professionnel</a></li>
+                                                      </ul>
+                          
+                                                                    <!-- Fin Formations -->
+
+
+                      <!-- Début Ressources -->
+                      
+                                                                    <p style="margin-top: 10px;"> <b style="font-weight:900;"><a href="5.-Ressources.html">Ressources</a></b></p>
+                                                  <ul style="padding-left: 15px;">
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="1.-Documents.html">Documentation</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="https://www.flickr.com/photos/ifsiobj/albums">Galerie Photos</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="https://www.youtube.com/@Ifsio-i7m">Vidéos</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="4.-Liens-utiles.html">Liens utiles</a></li>
+                                                      </ul>
+                          
+                                                                    <!-- Fin Ressources -->
+
+                      <!-- Début Publications -->
+                      
+                                                                    <p style="margin-top: 10px;"> <b style="font-weight:900;"><a href="6.-Publications.html">Publications</a></b></p>
+                                                  <ul style="padding-left: 15px;">
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="1.-Actualites.html">Actualités</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="2.-Communiques.html">Communiqués</a></li>
+                                                                                        <li style="display: list-item; list-style: circle;"><a href="3.-Activites.html">Activités</a></li>
+                                                      </ul>
+                          
+                                                                    <!-- Fin Publications -->
+
+                    </div>
+
+                  </div>
+              </div> 
+              <div class="col-sm-12 col-md-6 col-xl-3">
+
+                <h4 style="text-transform:uppercase;">Heures d'ouvertures</h4>
+                <hr style="margin-bottom: 20px;">
+
+                 
+                <p>Lundi au Vendredi de 08H à 19H</p> 
+
+                <div>
+                  <h4 style="padding-top:40px;text-transform:uppercase;">Restez informé</h4>
+                  <hr style="margin-top: 18px; margin-bottom: 18px"> 
+
+                  <!-- RD Mailform-->
+                  <div id="newslettermessage"></div>
+                  <form class="rd-mailform rd-mailform-inline max-width-300" id="newsletterform">
+                    <div class="form-wrap">
+                      <input class="form-input" type="email" name="email" placeholder='Email'>
+                    </div>
+                    <button class="btn btn-picton-blue" type="submit">S'abonner</button>
+                  </form>
+
+                </div>
+                 
+
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-aside">
+          <div class="container rights">
+                <span class="pull-left ">
+                  <span style="font-size: 10px;" ></span><span class=" "></span><span style="font-size: 10px;" > Copyright © 2025
+                 </span> 
+                </span>
+                <span class="pull-right "> 
+                </span>
+              
+          </div>
+        </div>
+ 
+        
+      </footer>
+</div>
+<div class="snackbars" id="form-output-global"></div>
+<script src="assets/frontOffice/js/core.min.js"></script>
+<script src="assets/frontOffice/js/script.js"></script>
+<script src="assets/frontOffice/js/custom.js"></script>
+<!-- pagination.js -->
+<script src="assets/frontOffice/js/pagination.min.js"></script>
+     
+
+     <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+
+  // $("[class~=dIxMhd-bN97Pc-]").css('display', 'none')
+  // console.log($("[class~=dIxMhd-bN97Pc-]", document))
+
+    let newsletterform = $("#newsletterform").clone();
+      $("#newsletterform").replaceWith(newsletterform);
+
+      $("#newsletterform").on('submit', function(e){
+          e.preventDefault();
+          
+          let data = $(this).serializeArray();
+          $.ajax({
+              data: data,
+              type: 'POST',
+              url:  "https://ifsio.bj/newsletter/save_email",
+              dataType: 'text',
+              success:   function (resp) {
+                $("#newslettermessage").text(resp ? "Inscription réussit" : "Echec de l'inscription");
+                setTimeout(() => {
+                  $("#newslettermessage").text(null);
+                }, 5000);
+              },
+          })
+      })
+
+      function img_lazy_load(){
+
+          let galerie_img = document.querySelectorAll('.galerie_img'),
+          all_img = document.querySelectorAll('.img'),
+          caroussel_img = document.querySelectorAll('.caroussel_img'); 
+
+          const loadImages = (image) => {
+            image.setAttribute('src', image.getAttribute('data-src'));
+            image.onload = () => {
+              image.removeAttribute('data-src');
+            };
+          };
+
+          const loadCaroussel = (caroussel_img_ele) => {
+            $(caroussel_img_ele).closest('.swiper-slide').css('background-image', 'url(' + caroussel_img_ele.getAttribute('src') + ')');
+            $(caroussel_img_ele).closest('.swiper-slide').attr('data-slide-bg', caroussel_img_ele.getAttribute('data-src'));
+            caroussel_img_ele.onload = () => {
+              caroussel_img_ele.remove();
+            };
+          };
+
+          caroussel_img.forEach((img) => {
+            loadCaroussel(img);
+          });
+
+          galerie_img.forEach((img) => {
+            loadImages(img);
+          });
+
+          all_img.forEach((img) => {
+            loadImages(img);
+          });
+      }
+
+      img_lazy_load();
+
+      $(document).ready(function(){
+
+        function get_item_to_paginate(){
+          data = $('.to_paginate');
+          if(data.length) paginate(Object.values(data))
+        }
+
+        function paginate(data){
+          data.pop()
+          data.pop()
+            $('#pagination').pagination({
+                dataSource: data,
+                pageSize: 6,
+                className: 'paginationjs-theme-green paginationjs-big',
+                callback: function(data_piece, pagination) {
+                    let html_array = []
+                    for (let projet of data_piece){
+                      $(projet).css('display', 'block')
+                      html_array.push(projet)
+                    }
+                    $('#rubrique_container').html(html_array);
+                    $('#accordion1').html(html_array);
+                }
+            })
+        }
+
+        function seperat_statis(){
+          
+          let statis = $(".count_n"), check = statis.length;
+
+          if(check){
+            for (let stats of statis){
+              $(stats).html(parseInt($(stats).html()).toLocaleString())
+            }
+          }
+        }
+
+        get_item_to_paginate();
+        seperat_statis();
+
+        $("#pagination .paginationjs-pages ul li").css('backgroundcolor', '#217346'); 
+        
+      });
+
+      // var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      // (function(){
+      //   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      //   s1.async=true;
+      //   s1.src='https://embed.tawk.to/62f3bb8737898912e962445c/1ga4193fv';
+      //   s1.charset='UTF-8';
+      //   s1.setAttribute('crossorigin','*');
+      //   s0.parentNode.insertBefore(s1,s0);
+      // })();
+
+      $(document).ready(function(){
+
+          $(".filter-button-formations").click(function(){
+              var value = $(this).attr('data-filter');
+              
+              if(value == "all")
+              {
+                  //$('.filter').removeClass('hidden');
+                  $('.filter').show('1000');
+              }
+              else
+              {
+      //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+      //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                  $(".filter").not('.'+value).hide('3000');
+                  $('.filter').filter('.'+value).show('3000');
+                  
+              }
+          });
+          
+          if ($(".filter-button").removeClass("active")) {
+      $(this).removeClass("active");
+      }
+      $(this).addClass("active");
+
+      });
+  </script>
+  <!--End of Tawk.to Script-->
+  </body>
+</html>

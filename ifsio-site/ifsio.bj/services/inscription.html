@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Title -->
+  <title>IFSIO | Institut de formation en soins infirmiers et obstétricaux - Espace étudiant</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../logo.jpg">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- CSS Global Compulsory -->
+  <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/vendor/icon-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/vendor/icon-line-pro/style.css">
+  <link rel="stylesheet" href="../assets/vendor/animate.css">
+
+  <link rel="stylesheet" href="../assets/vendor/icon-hs/style.css">
+
+  <link rel="stylesheet" href="../assets/vendor/hs-admin-icons/hs-admin-icons.css">
+  <!-- CSS Unify -->
+  <link rel="stylesheet" href="../assets/login/css/unify-core.css">
+  <link rel="stylesheet" href="../assets/login/css/unify-components.css">
+  <link rel="stylesheet" href="../assets/login/css/unify-globals.css">
+  <link rel="stylesheet" href="../assets/vendor/step-wizard/dist/jquery-steps.css">
+
+  <!-- CSS Customization -->
+  <link rel="stylesheet" href="../assets/login/css/custom.css">
+  <style>
+    .step-app > .step-steps > li.active{
+      background-color: #2e3c56;
+    }
+    .step-app > .step-steps > li.done {
+      background-color: #e5e5e5;
+      color: #333;
+    }
+
+    .step-app > .step-steps > li{
+      padding: 8px 15px;
+    }
+
+    .u-accordion__header{
+      padding: 8px 15px;
+    }
+
+
+
+    .tooltip-inner{
+      background: #2e3c56;
+      color: #fff;
+      padding: 8px 10px;
+      border:1px solid #999;
+/*      width: 300px;*/
+      max-width: 300px !important;
+    }
+    .tooltip-inner p{
+      margin:0;
+    }
+    .hide{
+      display: none !important;
+    }
+
+    .ivt_error p {
+      display: inline-block;
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+
+    .ivt_error { 
+      font-size: 12px; 
+    }
+
+
+    
+
+  </style>
+</head>
+
+<body style="overflow-y:hidden;">
+  <main>
+    <!-- Login -->
+    <section class="g-min-height-100vh g-flex-centered g-bg-lightblue-radialgradient-circle" style="background: #f5f5f5;">
+      <div class="container g-py-30">
+        <div class="row justify-content-center">
+          <div class="col-sm-8 col-lg-6">
+            <h6 class="g-font-weight-600 text-center g-mb-20" style="font-size: 18px;color:#888;text-shadow: 0.5px 0px #888;">Formulaire d'inscription</h6>
+            <div class="u-shadow-v24 g-bg-white rounded g-py-20 g-px-20" style="width: 105%;">
+              <!-- <img style="height:50px;margin: 0 auto;display: block;" src="https://ifsio.bj/assets/ressources/jpg/logo-1.jpg" alt="Logo" class="g-mb-10"> -->
+
+
+              <div class="col-md-12 " style="padding:0">
+                <div class="container" style="padding:0">
+                  <div class="banniere_img_cnt" style="width:12%;display: inline-block;">
+                    <div class="banniere_img" style="height: 80px;  float: left; padding-left: 0px;  margin-top: 0px;">
+                      <img class="univparakou_img" src="../assets/logo_univ_parakou.jpg" style="height: 58px; margin: 0px;border-radius: 100%;left: 2px;position: relative;margin-top: -5px;">
+                    </div>
+                  </div>
+                  <div class="banniere_text_cnt"  style="width:70%;display: inline-block;vertical-align: top; margin-top: 0px;left: 4px; position: relative;">
+                    <p class="banniere_text" style="text-transform:uppercase;text-align: center;color: #F30704;font-size: 11px;margin-bottom: 0px;font-weight: 700;">Université de Parakou</p> 
+                    <p class="banniere_text hidden-xs" style="text-transform:uppercase;text-align: center;color: #1D8ec7;font-style: italic;font-size: 11px; margin-top: 0px;font-weight: 700">Institut de formation en soins infirmiers <br> et obstétricaux (IFSIO)</p> 
+                  </div>
+                  
+
+                  <div class="banniere_img_cnt"  style="width:16%;display: inline-block; text-align: right; vertical-align: top;">
+                      <a href="../index.html">
+                        <div class="banniere_img" style="height: 60px;  float: right;  margin-right: 10px;  margin-top: 0px;">
+                            <img class="ifsio_img" src="../assets/ressources/jpg/logo-1.jpg" style="height: 98%; margin: 0px;border-radius: 100%;left: 2px;position: relative;margin-top: -5px;">
+                        </div>
+                      </a>
+                  </div>
+                </div>
+              </div>
+
+                
+              <!-- <header class="text-center mb-4">
+                <h5 style="font-size: 14px;" class="g-color-main g-font-weight-600">Inscrivez-vous ici</h5>
+              </header> -->
+
+              <!-- Danger Alert -->
+              
+                    
+               
+
+               
+                                       
+              <!-- End Danger Alert -->
+
+              <!-- Form -->
+              <form id="formulaire_inscription"  class="sky-form g-brd-around g-mb-0" action="https://ifsio.bj/services/inscription/enregistrer" method="post"> 
+                <div style="padding-bottom: 15px;">
+                  <div class="form-check" style="display:inline-block;">
+                    <input class="form-check-input" type="radio" name="type_compte" id="flexRadioDefault1"                       checked
+                      value="etudiant">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Je suis un étudiant
+                    </label>
+                  </div>
+                  <div class="form-check" style="display:inline-block; margin-left: 20px;">
+                    <input class="form-check-input" type="radio" name="type_compte" id="flexRadioDefault2"  value="professeur" >
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Je suis un enseignant/chargé de cours
+                    </label>
+                  </div>
+                </div>
+              
+                <div class="step-conten" style="margin-bottom: 25px;">
+                    <div class="step-tab-panel step_etudiant">
+                      <!-- Mon Identité -->
+                      <div id="accordion-04" class="u-accordion" role="tablist" aria-multiselectable="true">
+                        <!-- Card -->
+                        <div class="card rounded-0 g-mb-15">
+                          <div id="accordion-04-heading-01" class="u-accordion__header" role="tab" style="background:#f5f5f5">
+                            <h5 class="my-0" style="color: #19703f;">
+                              <a style="text-transform: uppercas;color: #2e3c56 !important; font-weight: 600 !important;" class="u-link-v5 g-color-main g-color-primary--hover g-font-size-15  g-font-weight-300" href="inscription.html#accordion-04-body-01" data-toggle="collapse" data-parent="#accordion-04" aria-expanded="true" aria-controls="accordion-04-body-01"> Mon identité 
+                                <!-- <i  title="Le formulaire est valide"  style="color: green;" class="hs-admin-check"></i> -->
+                              <span class="u-accordion__control-icon g-ml-10 pull-right">
+                                <i class="fa fa-angle-down"></i>
+                                <i class="fa fa-angle-up"></i>
+                              </span>
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="accordion-04-body-01" class="collapse show" role="tabpanel" aria-labelledby="accordion-04-heading-01" data-parent="#accordion-04">
+                            <div class="u-accordion__body g-brd-top g-brd-gray-light-v4 " style="padding-top: 10px;">
+                               <div class="row">
+                                  <div class="col-md-6">
+                                    <div class=" mb-2">
+                                      <label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Nom <span style="color:red">*</span></label>  
+                                      <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-5 g-px-10" type="text" placeholder="" name="nom" value="">
+
+                                    </div>
+                                  </div> 
+
+                                  <div class="col-md-6">
+                                    <div class=" mb-2"> 
+                                      <label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Prénoms <span style="color:red">*</span></label>  
+                                      <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-5 g-px-10" type="text" placeholder="" name="prenoms" value="">
+                                    </div> 
+                                  </div>
+                                </div>
+           
+                                <div class="row"> 
+                                  <div class="col-md-6">
+                                    <div class=" mb-2"> 
+                                      <label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Email <span style="color:red">*</span></label>  
+                                      <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-5 g-px-10" type="email" placeholder="" name="email" value="">
+                                    </div> 
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class=""> 
+                                      <label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Matricule <span style="color:red">*</span></label>  
+                                      <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-5 g-px-10" type="text" placeholder="" name="matricule" value="">
+                                    </div> 
+                                  </div>
+
+                                  
+                                </div>
+
+                               <div class="row"> 
+                                  <div class="col-md-12">
+                                    <div class=""> 
+                                      <label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Nom d'utilisateur :</label>  
+                                      
+                                      <div class="generated_username" style="display: inline-block; color: #333; color: #1D8ec7;padding: 0px 0px; color:#2E3C56"></div>
+                                      <input type="hidden" name="pseudo" />
+
+                                    </div> 
+                                  </div> 
+
+                                  <!-- <div class="col-md-6"> 
+                                      
+                                      <div class="generated_username" style="display: inline-block; color: #333; color: #1D8ec7;padding: 0px 0px;  width: 100%;"></div>
+  
+                                  </div> --> 
+
+                                  <!-- <div class="col-md-6"> 
+                                    <input readonly class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-5 g-px-10" type="pseudo" placeholder="" name="pseudo" value="">
+                                  </div> -->
+
+                                  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Card -->
+                      </div>
+
+                      
+                      <!-- Mon parcours -->
+
+                      <div id="accordion-03" class="u-accordion" role="tablist" aria-multiselectable="true">
+                        <!-- Card -->
+                        <div class="card rounded-0">
+                          <div id="accordion-03-heading-01" class="u-accordion__header" role="tab"  style="background:#f5f5f5">
+                            <h5 class="my-0">
+                              <a style="color: #2e3c56 !important; font-weight: 600 !important;" class="u-link-v5 g-color-main g-color-primary--hover g-font-size-15 collapsed g-font-weight-300" href="inscription.html#accordion-03-body-01" data-toggle="collapse" data-parent="#accordion-03" aria-expanded="false" aria-controls="accordion-03-body-01">Mon parcours                               <span class="u-accordion__control-icon g-ml-10 pull-right">
+                                <i class="fa fa-angle-down"></i>
+                                <i class="fa fa-angle-up"></i>
+                              </span>
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="accordion-03-body-01" class="collapse" role="tabpanel" aria-labelledby="accordion-03-heading-01" data-parent="#accordion-03">
+                            <div class="u-accordion__body g-brd-top g-brd-gray-light-v4 ">
+                              <div class="row"> 
+
+                                <div class="col-md-4">
+                                  <div class=""> 
+                                    <label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Année académique: </label> 
+                                    <select name="parcours_annee"  class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-0 g-px-10">
+                                      <option value="">Sélectionner</option>
+                                                                                                                        <option  value="2">2026-2027</option>
+                                                                                  <option  value="1">2025-2026</option>
+                                                                                                                  </select>
+                                  </div> 
+                                </div>
+
+
+                                <div class="col-md-3">
+                                  <div class=""> 
+                                    <label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Diplôme:</label>                                      <div class="row">
+                                      <div class="col-md-12" >
+                                        <select name="parcours_diplome" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-0 g-px-10">
+                                          <option value="">Sélectionner</option>
+                                          <option value="Licence 1" >Licence 1</option>
+                                          <option value="Licence 2" >Licence 2</option>
+                                          <option value="Licence 3" >Licence 3</option>
+                                          <option value="Master 1" >Master 1</option>
+                                          <option value="Master 2" >Master 2</option>
+                                        </select>
+                                      </div> 
+                                    </div>                                                                                    
+                                  </div> 
+                                </div>
+
+
+                                <div class="col-md-5">
+                                  <div class=""> 
+                                    <label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Filière: </label> 
+                                    <select name="parcours_filiere"  class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-0 g-px-10">
+                                                                                                                        <option  value="3">Soins obstétricaux</option>
+                                                                                  <option  value="4">Soins infirmiers</option>
+                                                                                  <option  value="5">Soins de médecine d'urgence</option>
+                                                                                  <option  value="6">Instrumentation et aide chirurgicales</option>
+                                                                                  <option  value="7">Santé sexuelle et reproductive</option>
+                                                                                                                  </select>
+                                  </div> 
+                                </div>
+ 
+
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Card -->
+                      </div>
+                       
+                    </div>
+
+                    <div class="step-tab-panel step_professeur hide" >
+                       
+                      <!-- Mon Identité -->
+                      <div id="accordion-05" class="u-accordion" role="tablist" aria-multiselectable="true">
+                        <!-- Card -->
+                        <div class="card rounded-0 g-mb-15">
+                          <div id="accordion-05-heading-01" class="u-accordion__header" role="tab" style="background:#f5f5f5">
+                            <h5 class="my-0" style="color: #19703f;">
+                              <a style="text-transform: uppercas;color: #2e3c56 !important; font-weight: 600 !important;" class="u-link-v5 g-color-main g-color-primary--hover g-font-size-15  g-font-weight-300" href="inscription.html#accordion-05-body-01" data-toggle="collapse" data-parent="#accordion-05" aria-expanded="true" aria-controls="accordion-05-body-01"> Mon identité 
+                              <span class="u-accordion__control-icon g-ml-10 pull-right">
+                                <i class="fa fa-angle-down"></i>
+                                <i class="fa fa-angle-up"></i>
+                              </span>
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="accordion-05-body-01" class="collapse show" role="tabpanel" aria-labelledby="accordion-05-heading-01" data-parent="#accordion-05">
+                            <div class="u-accordion__body g-brd-top g-brd-gray-light-v4 " style="padding-top: 10px;">
+                               <div class="row">
+                                  <div class="col-md-6">
+                                    <div class=" mb-2">
+                                      <label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Nom <span style="color:red">*</span></label>  
+                                      <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-5 g-px-10" type="text" placeholder="" name="nom_professeur" value="">
+                                    </div>
+                                  </div> 
+
+                                  <div class="col-md-6">
+                                    <div class=" mb-2"> 
+                                      <label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Prénoms <span style="color:red">*</span></label>  
+                                      <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-5 g-px-10" type="text" placeholder="" name="prenoms_professeur" value="">
+                                    </div> 
+                                  </div>
+                                </div>
+           
+                                <div class="row"> 
+                                  <div class="col-md-6">
+                                    <div class="mb-2"> 
+                                      <label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Email <span style="color:red">*</span></label>   
+                                      <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-5 g-px-10" type="email" placeholder="" name="email_professeur" value="">
+                                    </div> 
+                                  </div>
+
+                                  <div class="col-md-6">
+                                    <div class=""> 
+                                      <label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Téléphone </label>   
+                                      <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-5 g-px-10" type="text" placeholder="" name="tel_professeur" value="">
+                                    </div> 
+                                  </div>
+
+                                  
+                                </div>
+
+                                <div class="row"> 
+                                  <div class="col-md-12">
+                                    <div class=""> 
+                                      <label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Nom d'utilisateur :</label>  
+                                      
+                                      <div class="professeur_generated_username" style="display: inline-block; color: #333; color: #1D8ec7;padding: 0px 0px; color:#2E3C56"></div>
+                                      <input type="hidden" name="pseudo_professeur" />
+
+                                    </div> 
+                                  </div> 
+ 
+                                  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Card -->
+                      </div>
+
+                      
+                      <!-- Mes classes -->
+
+                      <div id="accordion-06" class="u-accordion" role="tablist" aria-multiselectable="true">
+                        <!-- Card -->
+                        <div class="card rounded-0">
+                          <div id="accordion-06-heading-01" class="u-accordion__header" role="tab"  style="background:#f5f5f5">
+                            <h5 class="my-0">
+                              <a style="color: #2e3c56 !important; font-weight: 600 !important;" class="u-link-v5 g-color-main g-color-primary--hover g-font-size-15 collapsed g-font-weight-300" href="inscription.html#accordion-06-body-01" data-toggle="collapse" data-parent="#accordion-06" aria-expanded="false" aria-controls="accordion-06-body-01">Mes classes  
+                              <span class="u-accordion__control-icon g-ml-10 pull-right">
+                                <i class="fa fa-angle-down"></i>
+                                <i class="fa fa-angle-up"></i>
+                              </span>
+                              </a>
+                              <a id="ajouter_classe" style="color: #2e3c56; background: #e5e5e5; padding:0px 15px;margin-right: 20px; border: 1px solid #d0d0d0; border-radius: 3px;float: right; text-decoration: none; " href="inscription.html#">+</a>
+                            </h5>
+                          </div>
+                          <div id="accordion-06-body-01" class="collapse" role="tabpanel" aria-labelledby="accordion-06-heading-01" data-parent="#accordion-06">
+
+                            <!-- <div>
+                              <p style="text-align: center;">Cliquez sur le bouton  pour ajouter une classe</p>
+                            </div> -->
+                            <div style="height: 155px; overflow: auto;" class="u-accordion__body g-brd-top g-brd-gray-light-v4 ">
+                              <div id="mes_classes">
+                                <p id="mes_classes_empty_text" class="" style="text-align: center;position: relative; top: 50px;">Cliquez sur le bouton <span style="color: #2e3c56; background: #e5e5e5; padding:0px 15px;margin: 0px 5px; border: 1px solid #d0d0d0; border-radius: 3px;" href="#">+</span> pour ajouter une classe</p>
+                                <div id="mes_classes_content" class="hide
+                                  
+                                 ">
+                                  <!-- <p id="mes_classes_content_empty_text" style="text-align: center;">Cliquez sur le bouton <span style="color: red; background: #fff; padding:2px 5px; border: 1px solid red; border-radius: 3px;position: relative; top: -4px; " href="#"><i class="fa fa-minus"></i></span> pour retirer une classe</p> -->
+                                  <div id="mes_classes_content_data">
+                                                                      </div>
+                                  
+                                </div>
+
+                                
+                              </div>
+
+                              <!-- <div style="position: relative;">
+                                <div class="floating-container">
+                                  <div class="floating-button">+</div>
+                                  <div class="element-container">
+   
+                                     
+                                  </div>
+                                </div>
+                              </div> -->
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Card -->
+                      </div>
+                    </div> 
+                </div> 
+                 
+                
+                
+
+  
+                
+ 
+
+                <div class="">
+                   
+                  <div style="margin-top: 0px;" class="row ">
+                    <div class="col-md-7 my-auto" style="text-align:center;">
+                      <div style="border: 1px solid #ddd; padding: 15px 5px; border-radius: 5px;">
+                        <p style="position: absolute; top: -10px; left: 15px; width: 91%;"><span style="color: #2e3c56;position: relative;text-align: center; padding:0 15px;text-transform: uppercase;background: #fff; font-size:12px">Aller à</span></p>
+                        
+                        <a style="display: inline-block;color:#1D8ec7;font-weight: 700; " href="../index.html"><p style="margin: 0;text-transform: uppercase;"><i class=""></i>Site internet</p></a> <span style="padding: 0 20px;" style="color: #888;">|</span> 
+                        <a style="display: inline-block;color:#1D8ec7;font-weight: 700; " href="ressources.html"><p style="margin: 0;text-transform: uppercase;">Connexion</p></a> 
+                      </div>
+                                        
+                    </div> 
+                    <div class="col-5 align-self-center text-right g-mt-5">
+                      <button type="submit" class="btn btn-md u-btn-primary rounded g-py-10 g-px-15">M'inscrire</button>
+                    </div>
+                  </div>
+                </div>
+
+ 
+              </form>
+              <!-- End Form -->
+            </div>
+
+            <!-- <div class="row" style="margin-top:20px">
+              
+            </div> --> 
+            <p class="text-center g-pt-20 mb-0 " style="color:#888;text-shadow: 0.5px 0px #888;">&copy IFSIO 2025 </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Login -->
+  </main>
+
+  <div class="u-outer-spaces-helper"></div>
+
+
+  <!-- JS Global Compulsory -->
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+  <script src="../assets/vendor/popper.min.js"></script>
+  <script src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+
+  <!-- JS Unify -->
+  <script src="../assets/js/hs.core.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/localization/messages_fr.js"></script>
+  <script src="../assets/vendor/step-wizard/dist/jquery-steps.js"></script>
+  <script>
+    var frmInfo = $('#frmInfo');
+    var frmInfoValidator = frmInfo.validate(
+        {
+            messages: {
+              fichier: {
+                required: "Le fichier est requis."
+              }
+            }
+        }
+      );
+
+    var frmLogin = $('#frmLogin');
+    var frmLoginValidator = frmLogin.validate();
+
+    var frmMobile = $('#frmMobile');
+    var frmMobileValidator = frmMobile.validate();
+
+    $('#steps_inscription').steps({
+      onChange: function (currentIndex, newIndex, stepDirection) {
+        // step2
+        // if (currentIndex === 1) {
+        //   if (stepDirection === 'forward') {
+        //     return frmInfo.valid();
+        //   }
+        //   if (stepDirection === 'backward') {
+        //     frmInfoValidator.resetForm();
+        //   }
+        // }
+        return true;
+      },
+      onFinish: function () {
+        alert('Wizard Completed');
+      }
+    });
+  </script>
+
+  <!-- JS Customization -->
+  <script src="../assets/js/custom.js"></script>
+
+  <script>
+    $(document).ready(function() { 
+      // $("input[name=type_compte]").trigger('change')
+      var type_compte = "etudiant"
+      // alert(type_compte)
+      if (type_compte=="etudiant") {
+        $('.step_etudiant').removeClass("hide")
+        $('.step_professeur').addClass("hide")
+      }else{
+
+        $('.step_etudiant').addClass("hide")
+        $('.step_professeur').removeClass("hide")
+      }
+    });
+
+
+      
+
+    $(document).on("click","#retirer_classe", function(e){
+      e.preventDefault()
+      $(this).closest(".classe_item").remove()
+      // update classes id
+      $('.classe_item').each(function(index){
+         $(this).find('.numero_classe').html(index+1);
+      });
+    }) 
+   
+
+    $("#ajouter_classe").click(function(e){
+      e.preventDefault()
+
+
+
+
+
+
+      $('#mes_classes_empty_text').addClass("hide")
+      $('#mes_classes_content').removeClass("hide")
+      var numero_classe = $('.classe_item').length + 1 
+      var row = '<div class="classe_item">'+  
+      '<div class="row" style="padding-top:10px">'+ 
+        '<div class="col-md-12"><p><b>Classe n°<span class="numero_classe">'+numero_classe+'</span></b></p></div>'+
+              '<div class="col-md-4">'+
+                  '<div class="">'+ 
+                    '<label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Année académique: </label>'+ 
+                    '<select name="parcours_annee[]"  class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-0 g-px-10">'+
+                      '<option value="">Sélectionner</option>'+
+                      ''+
+                        ''+
+                          '<option value="2">2026-2027</option>'+
+                        ''+
+                          '<option value="1">2025-2026</option>'+
+                        ''+
+                      ''+
+                    '</select>'+
+                  '</div> '+
+                '</div>'+
+                                    '<div class="col-md-3">'+
+                                      '<div class=""> '+
+                                        '<label style="margin-top: 0px;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Diplôme:</label>' +
+                                        '<div class="row">'+
+                                          '<div class="col-md-12" >'+
+                                            '<select name="parcours_diplome[]" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded">'+'<option value="">Sélectionner</option>'+
+                                              '<option value="Licence 1">Licence 1</option>'+
+                                              '<option value="Licence 2">Licence 2</option>'+
+                                              '<option value="Licence 3">Licence 3</option>'+
+                                              '<option value="Master 1">Master 1</option>'+
+                                              '<option value="Master 2">Master 2</option>'+
+                                            '</select>'+
+                                          '</div> '+
+                                        '</div>' +                                                                                   
+                                      '</div>' +
+                                    '</div>'+
+
+     
+
+                                    '<div class="col-md-5">'+
+                                      '<div class="">' +
+                                        '<label style="margin-top: 0px; display: block;" class="g-color-gray-dark-v2 g-font-weight-600 g-font-size-13">Filière:</label>' +
+                                        '<select name="parcours_filiere[]" style="width: 82%; display: inline-block;"  class="parcours_filiere_array form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded  g-px-10"></select>'+
+
+                                        '<a id="retirer_classe" style="color: red; background: #fff; padding:2px 5px; border: 1px solid red; border-radius: 3px;position: relative; top: -4px; " href="inscription.html#"><i class="fa fa-minus"></i></a>'+
+                                      '</div> '+
+                                    '</div>'+
+                                    '</div>'+
+                                  '<hr style="margin-bottom:0px">'+
+                                  '</div>'
+      
+      var $div = $('#mes_classes_content_data').clone();  // Clone to avoid modifying the real one
+
+      $div.find('input, textarea, select').each(function(){
+          var value = $(this).val();
+          $(this).attr('value', value);  // Set value attribute to current value
+      });
+
+                               
+      var existing_rows = $('#mes_classes_content_data').html();//$div.html();
+      $('#mes_classes_content_data').append(row)
+    })
+
+  </script>
+  <script>
+    $("input[name=type_compte]").change(function(){
+      var type_compte = $(this).val()
+      if (type_compte=="etudiant") {
+        $('.step_etudiant').removeClass("hide")
+        $('.step_professeur').addClass("hide")
+      }else{
+
+        $('.step_etudiant').addClass("hide")
+        $('.step_professeur').removeClass("hide")
+      }
+    })
+
+
+
+    
+
+    
+
+      
+    // charger_les_filieres
+            
+    var parcours_diplome = $("select[name=parcours_diplome]").val()
+    charger_les_filieres(parcours_diplome)
+      
+
+    $(document).on("change", "select[name=parcours_diplome]", function(){
+      var parcours_diplome = $(this).val()
+      charger_les_filieres(parcours_diplome)
+      
+    })
+
+    $(document).on("change", 'select[name="parcours_diplome[]"]', function(){
+      var parcours_diplome = $(this).val()
+      // alert(parcours_diplome)
+      var this_main = $(this)
+      charger_les_filieres_array(parcours_diplome, this_main)
+      
+    })
+
+
+
+
+
+    function charger_les_filieres(diplome) {
+      $url = "https://ifsio.bj/"+'services/donnees/filieres/charger';
+      data = new FormData();
+      data.append("diplome", diplome);    
+      show_loading();
+      $.ajax({
+         url: $url,
+         data: data,
+         cache: false,
+         contentType: false,
+         dataType:'JSON',
+         processData: false,
+         type: 'POST',
+          success: function(data){
+            console.log("data")
+            console.log(data)  
+            if (data.filieres) {
+              $("select[name=parcours_filiere]").find('option').remove()
+              for (var i = 0; i < data.filieres.length; i++) {
+                 
+                $("select[name=parcours_filiere]").append("<option value='"+data.filieres[i].id+"'>"+data.filieres[i].filiere+"</option>")
+                 
+                
+              }
+            }
+                
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+           console.log(jqXHR.responseText+" "+errorThrown);
+          }
+      }); 
+    }
+
+    function charger_les_filieres_array(diplome, this_main) {
+      $url = "https://ifsio.bj/"+'services/donnees/filieres/charger';
+      data = new FormData();
+      data.append("diplome", diplome);    
+      show_loading();
+      $.ajax({
+         url: $url,
+         data: data,
+         cache: false,
+         contentType: false,
+         dataType:'JSON',
+         processData: false,
+         type: 'POST',
+          success: function(data){
+            console.log("data")
+            console.log(data)
+            // console.log('this_main.closest(".classe_item")')
+            // console.log(this_main.closest(".classe_item"))
+            // console.log('this_main.closest(".row").find(".parcours_filiere_array")')
+            // console.log(this_main.closest(".classe_item").find('.parcours_filiere_array')) 
+            // this_main.closest(".row").find('select[name="parcours_filiere[]').val()
+            if (data.filieres) {
+              this_main.closest(".classe_item").find('.parcours_filiere_array').find('option').remove()
+              for (var i = 0; i < data.filieres.length; i++) {
+                 
+                this_main.closest(".classe_item").find('.parcours_filiere_array').append("<option value='"+data.filieres[i].id+"'>"+data.filieres[i].filiere+"</option>")
+                
+              }
+            }
+                
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+           console.log(jqXHR.responseText+" "+errorThrown);
+          }
+      }); 
+    }
+
+
+    // var myvid = document.querySelector('.ivt_error > p');  
+
+    var v = document.querySelectorAll('.ivt_error'); 
+    v.forEach(function(element, index){
+      // console.log("element")
+      // console.log(index)
+      // console.log(element)
+      var length = element.textContent.length - element.textContent.split('.').length 
+      $(element).removeClass('hide') 
+      if (length!=0) { 
+          if (length > 25) {
+            element.innerHTML = element.textContent.substring(0,25)+'...'
+          }else{
+            element.innerHTML = element.textContent
+          } 
+      }
+      
+      
+    })
+
+    
+
+    // alert(length) 
+    
+
+    // alert(myvid.innerHTML.substring(0,4))
+    
+
+    $("input[name=nom]").keyup(function(){
+      $('.generated_username').text("")
+      var nom = $(this).val()
+      var prenoms = $("input[name=prenoms]").val()
+      prenoms = prenoms.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      nom = nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      if (prenoms) {
+        $('.generated_username').text(prenoms+"."+nom)
+      }else{
+        $('.generated_username').text(nom)
+      }
+      
+    })
+    $("input[name=nom]").change(function(){
+      $('.generated_username').text("")
+      var nom = $(this).val()
+      var prenoms = $("input[name=prenoms]").val()
+      prenoms = prenoms.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      nom = nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      if (prenoms) {
+        $('.generated_username').text(prenoms+"."+nom)
+      }else{
+        $('.generated_username').text(nom)
+      }
+      
+    })
+
+    $("input[name=prenoms]").keyup(function(){
+      $('.generated_username').text("")
+      var prenoms = $(this).val()
+      var nom = $("input[name=nom]").val()
+      prenoms = prenoms.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      nom = nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      if (prenoms) {
+        $('.generated_username').text(prenoms+"."+nom)
+      }else{
+        $('.generated_username').text(nom)
+      }
+
+    })
+    $("input[name=prenoms]").change(function(){
+      $('.generated_username').text("")
+      var prenoms = $(this).val()
+      var nom = $("input[name=nom]").val()
+      prenoms = prenoms.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      nom = nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      if (prenoms) {
+        $('.generated_username').text(prenoms+"."+nom)
+      }else{
+        $('.generated_username').text(nom)
+      }
+
+    })
+
+
+
+
+
+    // Professeur
+    $("input[name=nom_professeur]").keyup(function(){
+      $('.professeur_generated_username').text("")
+      var nom = $(this).val()
+      var prenoms = $("input[name=prenoms_professeur]").val()
+      prenoms = prenoms.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      nom = nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      if (prenoms) {
+        $('.professeur_generated_username').text(prenoms+"."+nom)
+      }else{
+        $('.professeur_generated_username').text(nom)
+      }
+      
+    })
+    $("input[name=nom_professeur]").change(function(){
+      $('.professeur_generated_username').text("")
+      var nom = $(this).val()
+      var prenoms = $("input[name=prenoms_professeur]").val()
+      prenoms = prenoms.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      nom = nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      if (prenoms) {
+        $('.professeur_generated_username').text(prenoms+"."+nom)
+      }else{
+        $('.professeur_generated_username').text(nom)
+      }
+      
+    })
+
+    $("input[name=prenoms_professeur]").keyup(function(){
+      $('.professeur_generated_username').text("")
+      var prenoms = $(this).val()
+      var nom = $("input[name=nom_professeur]").val()
+      prenoms = prenoms.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      nom = nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      if (prenoms) {
+        $('.professeur_generated_username').text(prenoms+"."+nom)
+      }else{
+        $('.professeur_generated_username').text(nom)
+      }
+
+    })
+    $("input[name=prenoms_professeur]").change(function(){
+      $('.professeur_generated_username').text("")
+      var prenoms = $(this).val()
+      var nom = $("input[name=nom_professeur]").val()
+      prenoms = prenoms.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      nom = nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(" ",'');
+      if (prenoms) {
+        $('.professeur_generated_username').text(prenoms+"."+nom)
+      }else{
+        $('.professeur_generated_username').text(nom)
+      }
+
+    })
+ 
+    
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+le bouton devenir patenaire devrait conduire à un formulaire pour envoyer un mail à l'admin du système. 
+
+les boutons du nav au niveau du landing page, tu peux faire mieux.
+
+Au fait, on garde les couleurs et la présentation de l'interface étudiant pour les autres utilisateurs et toute la plateforme.
+
+retient que le cntrss est une bibliothèque numérique sauf que pour y entrer il faut un compte. l'accés est pour tout le monde qui possède un compte. 
+
+l'inscription des bibliothécaires se feront par l'admin du sytème. pareil pour l'interface des écoles et facultés. toi et moi nous construisons l'interface, le batiment. les écoles prennent un appart chacun et dépose leur document. 
+
+notre sytème répétorie tout, les classent, et garde un oeil la dessus. 
+
+l'assistant de recherche peut farfouiller dans les documents à la recherche d'info et trouver ce qui lui est demander. 
+
+le formulaire de soumission d'un memoire n'est pas à sa place actuellemnt. retire le ou rend le invisible pour le moment. le moment venu on le rendra publique. 
+
+
+pour l'interface de l'agent, on peut faire mieux. c'est un chat bot alors on peut avoir un historique des conversations, comme démarrer une nouvelle conversations. 
+
+les écoles et facultés soumettrons par elle meme leurs catalogue. un document soumi et validé veut dire un document classé et répétorié: par conséquent mise à jour automatique des chiffres. pour la liste des écoles de santé, tu as oublié l'ifsio. 
+
+efface les données statiques qui sont affichés et ramème les compteurs à zéro. ensuite je te donnerai un catalogue test.

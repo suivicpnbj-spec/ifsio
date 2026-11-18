@@ -1,0 +1,22 @@
+/* Login layout refresh for the IFSIO editorial administration page. */
+.admin-page .admin-main{padding:30px 24px 62px}
+.admin-page .admin-login-shell{width:min(1120px,100%);min-height:600px;margin:0 auto;grid-template-columns:1.02fr .98fr;overflow:hidden;border:1px solid #dfe7e3;background:#fff;box-shadow:0 24px 70px rgba(15,48,74,.11)}
+.admin-page .admin-login-aside{align-self:stretch;justify-self:stretch;max-width:none;padding:clamp(38px,5vw,72px);display:flex;flex-direction:column;justify-content:center;background:linear-gradient(145deg,rgba(8,38,61,.94),rgba(17,65,83,.84)),url('assets/campus-2.jpg') center/cover}
+.admin-page .admin-login-aside h1{margin:18px 0;color:#fff;font-size:clamp(39px,4.1vw,56px)}
+.admin-page .admin-login-aside>p{max-width:400px;font-size:13px}
+.admin-feature-list{display:grid;gap:11px;margin-top:17px}
+.admin-feature-list>span{display:flex;align-items:center;gap:12px;color:#f4f7f7;font-size:11px}
+.admin-feature-list i{display:grid;place-items:center;width:27px;height:27px;border:1px solid #ffffff42;border-radius:50%;color:#e6c77f;font:700 8px var(--sans);font-style:normal}
+.admin-feature-list b{font-weight:600}
+.admin-page .admin-access-note{margin-top:26px}
+.admin-page .admin-auth-card{align-self:stretch;width:auto;margin:0;padding:clamp(35px,5vw,66px);display:flex;flex-direction:column;justify-content:center;box-shadow:none}
+.admin-page .admin-auth-logo{margin-bottom:38px}
+.admin-page .admin-auth-card h2{font-size:clamp(23px,2.2vw,29px)}
+.admin-page .admin-auth-card>p{font-size:12px;line-height:1.6}
+.admin-page .admin-auth-card form{gap:17px}
+.admin-demo-access{display:grid;gap:9px;margin-top:27px;padding-top:20px;border-top:1px solid #edf0ef}
+.admin-demo-access>span{color:#879499;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.admin-page .admin-preview-link{justify-self:start;margin:0;padding:0;color:#347e78;font-size:10px}
+.admin-page .admin-back-link{margin-top:22px}
+@media(max-width:760px){.admin-page .admin-main{padding:20px 16px 42px}.admin-page .admin-login-shell{min-height:0;grid-template-columns:1fr}.admin-page .admin-login-aside{padding:39px 30px 32px}.admin-page .admin-login-aside h1{font-size:42px}.admin-page .admin-auth-card{padding:34px 30px}.admin-page .admin-auth-logo{margin-bottom:27px}}
+@media(max-width:420px){.admin-page .admin-main{padding:12px 10px 30px}.admin-page .admin-login-aside{padding:32px 22px 27px}.admin-page .admin-auth-card{padding:29px 22px}.admin-page .admin-login-aside h1{font-size:36px}}

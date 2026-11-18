@@ -1,0 +1,185 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ---------- Modèles métier ----------
+
+model Document {
+  id              String   @id @default(cuid())
+  doi             String   @unique
+  title           String
+  type            String
+  discipline      String
+  studyDesign     String?
+  healthZone      String?
+  year            Int
+  author          String
+  supervisor      String?
+  institution     String
+  keywords        String   // stored as JSON string
+  meshTerms       String?  // stored as JSON string
+  abstract        String
+  clinicalKeyTakeaways String? // stored as JSON string
+  hasOpenData     Boolean  @default(false)
+  citationsCount  Int      @default(0)
+  pages           Int      @default(50)
+  downloads       Int      @default(0)
+  views           Int      @default(0)
+  fileName        String?  // nom d'origine du PDF déposé (ou généré)
+  fileMime        String?
+  fileBytes       Int?     // taille réelle en octets
+  dateAdded       String
+  status          String   @default("En cours de validation")
+  isFeatured      Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  validations     Validation[]
+}
+
+model Validation {
+  id            String   @id @default(cuid())
+  title         String
+  author        String
+  supervisor    String
+  type          String
+  discipline    String
+  institution   String
+  submissionDate String
+  status        String   @default("En attente")
+  assignedDoi   String?  @unique
+  shelfLocation String?
+  reviewNotes   String?
+  meshTerms     String   // stored as JSON string
+  fileSize      String?
+  fileName      String?  // nom du PDF déposé par l'auteur
+  fileMime      String?
+  fileBytes     Int?
+
+  documentId    String?  @unique
+  document      Document? @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model DocumentRequest {
+  id             String   @id @default(cuid())
+  title          String
+  author         String?
+  requesterName  String
+  requesterEmail String
+  requesterRole  String
+  institution    String
+  date           String
+  status         String   @default("En cours de recherche")
+  priority       String   @default("Normale")
+  notes          String?
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  timestamp String
+  userName  String
+  role      String
+  action    String
+  resource  String
+  status    String
+  ipAddress String
+
+  createdAt DateTime @default(now())
+}
+
+model UserAccount {
+  id           String   @id @default(cuid())
+  fullName     String
+  email        String   @unique
+  role         String
+  institution  String
+  discipline   String?
+  studentId    String?
+  passwordHash String   // scrypt: scrypt$N$r$p$sel(base64)$empreinte(base64)
+  status       String   @default("Actif")
+  joinedDate   String
+  lastLogin    String?
+  thesesCount  Int      @default(0)
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  sessions     Session[]
+  resetTokens  PasswordResetToken[]
+}
+
+// Jetons de réinitialisation de mot de passe. Seule l'empreinte SHA-256 du
+// jeton envoyé par e-mail est conservée : même en cas de fuite de la base, les
+// jetons ne peuvent pas être rejoués. Usage unique + expiration 30 minutes.
+model PasswordResetToken {
+  id        String    @id @default(cuid())
+  tokenHash String    @unique
+  userId    String
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  user      UserAccount @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+// Sessions serveur : le cookie httpOnly ne contient qu'un identifiant opaque,
+// la session est révocable côté serveur (déconnexion, suspension du compte).
+model Session {
+  id        String      @id
+  csrfToken String
+  userId    String
+  userAgent String?
+  ipAddress String?
+  expiresAt DateTime
+  createdAt DateTime    @default(now())
+
+  user      UserAccount @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+// ---------- Demandes de partenariat (formulaire « Devenir partenaire ») ----------
+// Chaque demande est conservée en base ET notifiée par e-mail à l'administrateur
+// du système (voir src/lib/partnerMailer.ts, clé RESEND_API_KEY).
+
+model PartnershipRequest {
+  id              String   @id @default(cuid())
+  institution     String
+  institutionType String   // École, Faculté, Hôpital, Institut, Autre
+  contactName     String
+  email           String
+  phone           String?
+  website         String?
+  message         String
+  status          String   @default("Nouvelle") // Nouvelle | En cours de traitement | Traité | Refusé
+  notes           String?  // traitement : réponse / motif laissés par l'administration
+  emailSent       Boolean  @default(false)
+  emailError      String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+// ---------- Identifiants persistants (optionnel, prudent avec SQLite) ----------
+
+model Counter {
+  key   String @id
+  value Int    @default(0)
+}

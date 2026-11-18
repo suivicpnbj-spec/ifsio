@@ -1,0 +1,14 @@
+node_modules
+frontend/node_modules
+frontend/dist
+.env
+.env.*
+*.log
+.git
+tests
+send-test-email.js
+send-test-sms.js
+exemple-import-notes.xlsx
+/exemple/
+/tmp-ocr/
+/frontend-prototype/

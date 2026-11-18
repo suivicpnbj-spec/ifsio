@@ -1,0 +1,18 @@
+node_modules
+dist
+server-dist
+coverage
+.vite
+*.local
+*.log
+.DS_Store
+.idea
+.vscode
+
+# Données locales : base SQLite, pièces jointes, clé de signature privée
+# (ancres de racine : le dossier source src/data/ doit rester versionné)
+/.data
+/data
+.env
+.env.*
+!.env.example

@@ -1,0 +1,18 @@
+/* Add here all your css styles (customizations) */
+.g-bg-lightblue-radialgradient-circle {
+    background-image: radial-gradient(circle farthest-corner at 75% 95%, #fff, #2E3C56);
+    background-repeat: no-repeat;
+}
+
+.u-btn-primary{
+	background-color:#2E3C56	 
+}
+
+.u-btn-primary:hover{
+	background-color:#5B667B;
+	border: 1px solid #5B667B
+}
+
+.text-primary{
+	color: #275BA3 !important
+}

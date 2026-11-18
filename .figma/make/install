@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# The selected campus preview is static and has no dependencies to install.
+exit 0

@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-50: #eef6ff;
+  --color-brand-100: #d9ebff;
+  --color-brand-200: #bcdcff;
+  --color-brand-300: #8ec6ff;
+  --color-brand-400: #59a6ff;
+  --color-brand-500: #2f84ff;
+  --color-brand-600: #1564e6;
+  --color-brand-700: #0f4fbd;
+  --color-brand-800: #103f94;
+  --color-brand-900: #12376f;
+  --color-brand-950: #0a2145;
+
+  --color-ink: #102a43;
+  --color-seal: #0f4fbd;
+
+  --shadow-soft: 0 1px 2px rgb(16 42 67 / 0.04), 0 8px 24px -12px rgb(16 42 67 / 0.18);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f6f8fb;
+    min-width: 320px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--color-brand-600);
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #eef2f7;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c3d0e0;
+    border-radius: 999px;
+    border: 2px solid #eef2f7;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9fb3ca;
+  }
+}
+
+@layer components {
+  /* Fine guilloche pattern used on official documents */
+  .guilloche {
+    background-image:
+      repeating-linear-gradient(45deg, rgb(15 79 189 / 0.055) 0 1px, transparent 1px 9px),
+      repeating-linear-gradient(-45deg, rgb(15 79 189 / 0.045) 0 1px, transparent 1px 11px);
+  }
+
+  .doc-sheet {
+    box-shadow:
+      0 0 0 1px rgb(15 23 42 / 0.08),
+      0 24px 60px -24px rgb(15 23 42 / 0.45);
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.35s ease-out both;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.25s ease-out both;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* Sortie papier : les marques des actes passent en niveaux de gris,
+     comme le reste du document. */
+  .doc-mark {
+    filter: grayscale(1) contrast(1.15);
+  }
+}

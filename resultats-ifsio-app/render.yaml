@@ -1,0 +1,83 @@
+# =============================================================================
+# Blueprint Render — deux espaces séparés raccordés à une base PostgreSQL
+# de production configurée dans le tableau de bord. Ne pas réutiliser la base bêta.
+#
+# 1. Pousser ce projet sur GitHub
+# 2. render.com → New → Blueprint → choisir le dépôt (render.yaml est détecté)
+# 3. Render crée :
+#      eresultat-ifsioscol  → entrée SCOLARITÉ imposée (ENTREE_DEFAUT=scolarite)
+#      eresultat-etudiant   → entrée ÉTUDIANT imposée (ENTREE_DEFAUT=etudiant)
+#    DATABASE_URL           → définir l'URL de la base de production séparément
+#
+# Les deux services doivent partager la même base PostgreSQL de production.
+# Chaque service sert le même build (frontend compilé + API) : la variable
+# ENTREE_DEFAUT impose à l'application de n'afficher que l'entrée de l'espace.
+# Les migrations SQL s'appliquent automatiquement au démarrage (idempotentes).
+# =============================================================================
+
+services:
+  # ---- Espace SCOLARITÉ ----
+  - type: web
+    name: eresultat-ifsioscol
+    runtime: docker
+    plan: free                       # passer à starter pour un usage continu
+    region: frankfurt                # le plus proche du Bénin
+    healthCheckPath: /api/sante
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ENTREE_DEFAUT
+        value: scolarite             # l'étudiant n'atteint jamais cette entrée
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_SSL
+        value: "true"
+      - key: CORS_ORIGIN
+        value: "*"
+      # --- SMS / email : à compléter dans le dashboard quand les comptes seront prêts ---
+      - key: SMS_PROVIDER_API_URL
+        sync: false
+      - key: SMS_PROVIDER_API_KEY
+        sync: false
+      - key: SMS_PROVIDER_USERNAME
+        sync: false
+      - key: SMS_SENDER_ID
+        sync: false
+      - key: SMS_WEBHOOK_SECRET
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_SECURE
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+
+  # ---- Espace ÉTUDIANT ----
+  - type: web
+    name: eresultat-etudiant
+    runtime: docker
+    plan: free
+    region: frankfurt
+    healthCheckPath: /api/sante
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ENTREE_DEFAUT
+        value: etudiant               # la scolarité n'atteint jamais cette entrée
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_SSL
+        value: "true"
+      - key: CORS_ORIGIN
+        value: "*"
+      # SMS / email : non renseignés ici (les notifications partent du service scolarité)

@@ -1,0 +1,12 @@
+[
+  {
+    "userName": "Système CNTRSS",
+    "role": "Administrateur",
+    "action": "Nouveau dépôt en file de validation",
+    "resource": "10.cntrss.bj/san.2026.SUB-001 - Persistance test - impact de la CPS à Parakou (2026)",
+    "status": "Succès",
+    "ipAddress": "127.0.0.1",
+    "id": "log-mv7c480w-duk0",
+    "timestamp": "14 oct. 2026, 00:51:18"
+  }
+]

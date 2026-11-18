@@ -1,0 +1,30 @@
+[Unit]
+Description=CNTRSS — Catalogue National des Travaux de Recherches en Sciences de Santé
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=cntrss
+Group=cntrss
+WorkingDirectory=/opt/cntrss
+# Fichiers de configuration : jamais dans le dépôt (voir .gitignore).
+EnvironmentFile=/opt/cntrss/.env
+ExecStart=/usr/bin/node dist/server.mjs
+Restart=always
+RestartSec=5
+
+# Durcissement : le processus n'a besoin ni des privilèges système, ni
+# d'écrire ailleurs que dans /var/lib/cntrss (base SQLite + PDF déposés).
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/cntrss
+
+# Healthcheck : l'orchestrateur (ou le cron de supervision) peut aussi
+# interroger GET /api/health.
+ExecStartPre=/usr/bin/test -f /opt/cntrss/dist/server.mjs
+
+[Install]
+WantedBy=multi-user.target
