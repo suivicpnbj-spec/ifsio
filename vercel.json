@@ -1,0 +1,33 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "cntrss-catalogue": {
+      "root": "cntrss-catalogue",
+      "framework": "vite"
+    },
+    "portal-service": {
+      "root": "ifsio-site/portal-service",
+      "framework": "express"
+    },
+    "mes-actes": {
+      "root": "mes-actes",
+      "framework": "vite"
+    },
+    "resultats-ifsio-app": {
+      "root": "resultats-ifsio-app",
+      "framework": "express"
+    },
+    "frontend": {
+      "root": "resultats-ifsio-app/frontend",
+      "framework": "vite"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "frontend"
+      }
+    }
+  ]
+}
