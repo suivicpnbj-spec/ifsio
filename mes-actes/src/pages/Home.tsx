@@ -31,7 +31,6 @@ import { ActCard } from '@/components/ActCard'
 import { BrandMark } from '@/components/Logo'
 import { InstitutionalEmblem } from '@/components/InstitutionalEmblem'
 import { OfficialSeal, QrGlyph } from '@/components/Receipt'
-import heroCampus from '@/assets/hero-campus.webp'
 import { Button, Card, Input, SectionHeading } from '@/components/ui'
 import type { CategoryId } from '@/types'
 
@@ -171,16 +170,28 @@ export function Home() {
               />
 
               <figure className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/20 bg-slate-800 shadow-2xl sm:rounded-3xl">
-                <img
-                  src={heroCampus}
-                  alt="Étudiante de l’IFSIO devant le campus de l’Université de Parakou, tenant ses cours"
-                  width={1200}
-                  height={896}
-                  loading="eager"
-                  decoding="async"
-                  referrerPolicy="no-referrer"
-                  className="h-full w-full object-cover object-center"
-                />
+                <div
+                  role="img"
+                  aria-label="Illustration institutionnelle de l’IFSIO et de l’Université de Parakou"
+                  className="relative flex h-full w-full items-center justify-center overflow-hidden bg-gradient-to-br from-brand-900 via-[#123e6b] to-sky-800"
+                >
+                  <div className="absolute -right-12 -top-16 h-64 w-64 rounded-full border border-white/10" />
+                  <div className="absolute -bottom-24 -left-12 h-72 w-72 rounded-full border border-white/10" />
+                  <div className="relative flex flex-col items-center gap-5 px-6 text-center text-white">
+                    <div className="grid h-28 w-28 place-items-center rounded-3xl border border-white/20 bg-white/10 shadow-2xl backdrop-blur">
+                      <Building2 className="h-16 w-16 text-sky-100" strokeWidth={1.25} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-bold tracking-[0.25em] text-sky-200 uppercase">Université de Parakou</p>
+                      <p className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">IFSIO</p>
+                      <p className="mt-1 text-xs text-white/75">Institut de Formation en Soins Infirmiers et Obstétricaux</p>
+                    </div>
+                    <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-sky-50">
+                      <GraduationCap className="h-4 w-4" />
+                      Excellence • Formation • Engagement
+                    </div>
+                  </div>
+                </div>
 
                 {/* Badge flottant : établissement + disponibilité */}
                 <figcaption className="absolute right-4 bottom-4 left-4 flex items-center justify-between gap-3 rounded-xl border border-white/80 bg-white/95 p-3 text-slate-900 shadow-lg backdrop-blur-md">
