@@ -1,6 +1,0 @@
-{
-  "name": "CNTRSS - Catalogue Numérique des Travaux de Recherches en Sciences de Santé",
-  "description": "Plateforme nationale centralisant les mémoires, thèses et rapports de recherche en sciences de santé au Bénin.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
