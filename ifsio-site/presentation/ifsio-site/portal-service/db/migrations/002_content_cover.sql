@@ -1,2 +1,0 @@
-ALTER TABLE portal_content
-  ADD COLUMN IF NOT EXISTS cover_file VARCHAR(180) NOT NULL DEFAULT '';
